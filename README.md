@@ -15,3 +15,7 @@ cache="/home/$USER/fxdev/server-data/cache"     #Chemin du cache serveur
 |`reboot`        |`r`           |Redémarrer le serveur        |
 |`console`       |`c`           |Affiche la console           |
 |`quit`          |`q`           |Quitte FxManager             |
+
+--------
+
+Vous pouvez utiliser et modifier ce code à votre guise. Cependant, ne prétendez jamais que c'est votre propre code et fournissez toujours un crédit approprié. Je ne vous aiderai cependant pas si vous souhaitez modifier mon code.

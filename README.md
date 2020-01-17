@@ -1,4 +1,4 @@
-#FxManager
+# FxManager
 FxManager détecte si un serveur en cours d'exécution si ce n'est pas le cas il vous propose de le lancer.
 
 ###### Vous devez remplacer les variables suivantes:

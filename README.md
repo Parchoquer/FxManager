@@ -9,9 +9,9 @@ pathServer="/home/$USER/fxdev"       # Chemin de la racine du serveur
 cache="/home/$USER/fxdev/server-data/cache"     #Chemin du cache serveur
 ```
 
-| Fonction | Raccourci | Description |
-| ---------------------------------- |
-| `stop` | `sp` | Eteint le serveur |
-| `reboot` | `r` | Redémarrer le serveur |
-| `console` | `c` | Affiche la console |
-| `quit` | `q` | Quitte FxManager |
+|Commande        |Raccourci     |Description                  |
+|----------------|--------------|-----------------------------|
+|`stop`          |`sp`          |Eteint le serveur            |
+|`reboot`        |`r`           |Redémarrer le serveur        |
+|`console`       |`c`           |Affiche la console           |
+|`quit`          |`q`           |Quitte FxManager             |

@@ -1,5 +1,15 @@
 # FxManager
-FxManager détecte si un serveur en cours d'exécution si ce n'est pas le cas il vous propose de le lancer.
+- Script simple a utiliser vous devez le placer a coter de votre `server-data` .
+- Vous devez installer manuellement votre serveur fivem ce script ne peut pas encore le faire pour vous.
+- FxManager détecte si un serveur en cours d'exécution si ce n'est pas le cas il vous propose de le lancer.
+
+### Prérequis
+- [Screen](https://doc.ubuntu-fr.org/screen "Screen") 
+`sudo apt install screen`
+
+- [Tar](https://doc.ubuntu-fr.org/tar "Tar") (Déjà installer sur la pluspart des distribution basé debian)
+`sudo apt install xz-utils`
+
 
 ###### Vous devez remplacer les variables suivantes:
 ```

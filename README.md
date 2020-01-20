@@ -27,6 +27,7 @@ cache="/home/$USER/fxdev/server-data/cache"     #Chemin du cache serveur
 |`reboot`        |`r`           |Redémarrer le serveur        |
 |`console`       |`c`           |Affiche la console           |
 |`quit`          |`q`           |Quitte FxManager             |
+|`update`        |`u`           |Mise à jour serveur          |
 
 --------
 

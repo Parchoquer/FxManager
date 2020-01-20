@@ -5,6 +5,7 @@ screenName="fxServerDev"    # Nom de la session screen
 data="/home/$USER/fxdev/server-data"     # Chemin server-data
 pathServer="/home/$USER/fxdev"       # Chemin de la racine du serveur
 cache="/home/$USER/fxdev/server-data/cache"     #Chemin du cache serveur
+latestRelease="`wget -q -O - https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/ | grep 'primary' | grep -Po '(?<=href="./).{45}'`"    # ne pas changer sauf si vous savez ce que vous faite !
 
 echo -e "\n"
 for i in {16..21} {21..16} ; do echo -en "\e[48;5;${i}m       \e[0m" ; done ; echo
@@ -39,6 +40,15 @@ if [[ $(screen -ls | grep $screenName | awk '{ print $1}' | cut -d '.' -f2-) == 
         "quit" | "q")
             echo -e "\e[46m[+]\e[49m bye !"
             ;;
+        "update" | "u")
+            echo -e "\e[46m[+]\e[49m Lancement de la mise a jour .."
+            wget -q --show-progress "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/$latestRelease/fx.tar.xz" -P $pathServer
+            echo -e "\e[46m[+]\e[49m Décompression fx.tar.xz.."
+            sleep 1
+            tar xvfJ fx.tar.xz
+            echo -e "\e[46m[+]\e[49m Suppression de l'archive.."
+            rm fx.tar.xz
+            echo -e "\e[46m[+]\e[49m Mise à jour terminer !"
     esac
 else
 echo -n -e "\e[101m[+]\e[49m Le serveur est éteint voulez vous le démarré ? (yes/no)\n> "

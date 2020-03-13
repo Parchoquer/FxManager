@@ -40,22 +40,13 @@ if [[ $(screen -ls | grep $screenName | awk '{ print $1}' | cut -d '.' -f2-) == 
         "quit" | "q")
             echo -e "\e[46m[+]\e[49m bye !"
             ;;
-        "update" | "u")
-            echo -e "\e[46m[+]\e[49m Lancement de la mise a jour .."
-            wget -q --show-progress "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/$latestRelease/fx.tar.xz" -P $pathServer
-            echo -e "\e[46m[+]\e[49m Décompression fx.tar.xz.."
-            sleep 1
-            tar xvfJ fx.tar.xz
-            echo -e "\e[46m[+]\e[49m Suppression de l'archive.."
-            rm fx.tar.xz
-            echo -e "\e[46m[+]\e[49m Mise à jour terminer !"
     esac
 else
-echo -n -e "\e[101m[+]\e[49m Le serveur est éteint voulez vous le démarré ? (yes/no)\n> "
+echo -n -e "\e[101m[+]\e[49m Le serveur est éteint que voulez vous faire ? (start/update/quit)\n> "
 read reChoice
 
     case $reChoice in
-        "yes" | "y")
+        "start" | "st")
             echo -e "\e[46m[+]\e[49m Lancement du serveur.."
             rm -r $cache
             sleep 1
@@ -63,8 +54,20 @@ read reChoice
             sleep 10
             echo -e "\e[46m[+]\e[49m Serveur prêt !\nBon jeux !"
             ;;
-        "no" | "n")
-        echo -e "\e[46m[+]\e[49m Bye !"
-        ;;
+        "update" | "u")
+            echo -e "\e[46m[+]\e[49m Lancement de la mise a jour .."
+            echo -e "\e[46m[+]\e[49m Téléchargement des nouveaux artefacts"
+            wget -q --show-progress "https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/$latestRelease/fx.tar.xz" -P $pathServer
+            echo -e "\e[46m[+]\e[49m Décompression fx.tar.xz.."
+            sleep 1
+            cd $pathServer
+            tar xvfJ $pathServer/fx.tar.xz
+            echo -e "\e[46m[+]\e[49m Suppression de l'archive.."
+            rm $pathServer/fx.tar.xz
+            echo -e "\e[46m[+]\e[49m Mise à jour terminer !"
+            ;;
+        "quit" | "q")
+            echo -e "\e[46m[+]\e[49m Bye !"
+            ;;
     esac
 fi

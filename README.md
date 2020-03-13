@@ -1,5 +1,5 @@
 # FxManager
-- Script simple a utiliser vous devez le placer a coter de votre `server-data` .
+- Script simple a utiliser vous pouvez le placer ou vous voulez mais  a coter de votre `server-data` est mieux.
 - Vous devez installer manuellement votre serveur fivem ce script ne peut pas encore le faire pour vous.
 - FxManager détecte si un serveur en cours d'exécution si ce n'est pas le cas il vous propose de le lancer.
 
@@ -13,7 +13,7 @@
 `sudo apt install xz-utils`
 
 
-###### Vous devez remplacer les variables suivantes:
+###### Vous devez remplacer les valeurs des variables suivantes:
 ```
 screenName="fxServerDev"    # Nom de la session screen
 data="/home/$USER/fxdev/server-data"     # Chemin server-data
@@ -23,6 +23,7 @@ cache="/home/$USER/fxdev/server-data/cache"     #Chemin du cache serveur
 
 |Commande        |Raccourci     |Description                  |
 |----------------|--------------|-----------------------------|
+|`start`         |`st`          |Eteint le serveur            |
 |`stop`          |`sp`          |Eteint le serveur            |
 |`reboot`        |`r`           |Redémarrer le serveur        |
 |`console`       |`c`           |Affiche la console           |

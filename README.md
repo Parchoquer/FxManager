@@ -23,7 +23,7 @@ cache="/home/$USER/fxdev/server-data/cache"     #Chemin du cache serveur
 
 |Commande        |Raccourci     |Description                  |
 |----------------|--------------|-----------------------------|
-|`start`         |`st`          |Eteint le serveur            |
+|`start`         |`st`          |Démarre le serveur           |
 |`stop`          |`sp`          |Eteint le serveur            |
 |`reboot`        |`r`           |Redémarrer le serveur        |
 |`console`       |`c`           |Affiche la console           |
